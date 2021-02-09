@@ -49,7 +49,7 @@ class App extends React.Component {
       const dy = e.clientY - this.state.dragPos.y;
 
       // Scroll the element
-     
+
       appElem.scrollTop = this.state.dragPos.top - dy;
       appElem.scrollLeft = this.state.dragPos.left - dx;
     }
@@ -151,29 +151,36 @@ class Columns extends React.Component {
   }
 
   render() {
-    return (
-      <div className="columns" id="columns">
+    if (this.state.columns) {
 
-        {this.state.columns.map((value, index) => {
-          return (
-            <Column
-              key={index}
-              colId={index}
-              title={value.title}
-              tasks={value.tasks}
-              deleteColumn={this.deleteColumn}
-              deleteTask={this.deleteTask}
-              updateTitle={this.updateTitle}
-              updateTaskTitle={this.updateTaskTitle}
-              newTask={this.newTask}
-              moveTask={this.moveTask}
-            />
-          )
-        })}
+      return (
+        <div className="columns" id="columns">
+          {this.state.columns.map((value, index) => {
+            return (
+              <Column
+                key={index}
+                colId={index}
+                title={value.title}
+                tasks={value.tasks}
+                deleteColumn={this.deleteColumn}
+                deleteTask={this.deleteTask}
+                updateTitle={this.updateTitle}
+                updateTaskTitle={this.updateTaskTitle}
+                newTask={this.newTask}
+                moveTask={this.moveTask}
+              />
+            )
+          })}
 
+          <NewColumn clicked={this.newColumn} />
+        </div>
+      );
+    }
+    else {
+      return (<div className="columns" id="columns">
         <NewColumn clicked={this.newColumn} />
-      </div>
-    );
+      </div>);
+    }
   }
 }
 
