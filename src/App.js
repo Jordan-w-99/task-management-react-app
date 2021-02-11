@@ -67,7 +67,10 @@ class App extends React.Component {
 class Columns extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { columns: JSON.parse(localStorage.getItem("userData")) };
+
+    let data = JSON.parse(localStorage.getItem("userData"));
+
+    this.state = { columns: (data ? data : []) };
   }
 
   save = () => {
