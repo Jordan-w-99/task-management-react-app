@@ -1,3 +1,11 @@
+:root{
+  --light: #BFFFEB;
+  --medium: #A5FFE3;
+  --dark: #62B399;
+  --secondary-light: #FFB8A6;
+  --secondary-dark: #B36550;
+}
+
 #app{
   overflow-x: scroll;
   height: calc(100vh - 100px);
@@ -43,9 +51,10 @@
   height: auto;
   margin: 0 10px auto 0px;
   padding: 20px 10px;
-  background-color: gray;
+  background-color:var(--light) ;
   border-radius: 10px;
   max-height: calc(100vh - 200px);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .column-title {
@@ -75,13 +84,14 @@
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
+
   align-items: center;
   overflow: hidden;
   height: 50px;
-  background-color: lightgray;
-  margin: 10px 0px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 5px 1px var(--dark);
+  margin: 10px 3px;
   border-radius: 5px;
-  /* min-width: 215px; */
 }
 
 .task-card:hover .edit-task-button {
@@ -96,10 +106,13 @@
   border: none;
   border-radius: 5px;
   transition: 0.1s;
+  background-color:whitesmoke;
+  box-shadow: 0 0 2px 1px var(--dark);
 }
 
 .edit-task-button:active {
-  background-color: lightgray;
+  background-color:lightgray;
+  box-shadow: 0 0 2px 1px var(--dark);
 }
 
 .tasks-list{
@@ -159,6 +172,8 @@
   height: 30px;
   border-radius: 10px;
   border: none;
+  background-color:rgba(255,255,196,0.5);
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2);
 }
 
 .new-column-button:active {
