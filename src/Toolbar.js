@@ -4,7 +4,17 @@ import React from 'react';
 class Toolbar extends React.Component{
     render(){
         return(
-            <div id="toolbar"></div>     
+            <div id="toolbar">
+                <BoardTitle />
+            </div>     
+        )
+    }
+}
+
+class BoardTitle extends React.Component{
+    render(){
+        return(
+            <h1 id="board-title">Board Title</h1>
         )
     }
 }

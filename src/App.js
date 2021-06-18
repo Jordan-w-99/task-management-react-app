@@ -235,7 +235,7 @@ class ColumnTitle extends React.Component {
 
   stopEditing = (e, colId, inpElem) => {
     if (e.type === "blur" || (e.type === "keypress" && e.code === "Enter")) {
-      if (inpElem.value === "") this.updateTitle(colId, "Untitled Task.");
+      if (inpElem.value === "") this.updateTitle(colId, "Untitled Column.");
       this.setState({ editing: false });
     }
   }

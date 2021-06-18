@@ -1,10 +1,15 @@
-#toolbar-container{
-    width:auto;
+#toolbar-container {
+    width: auto;
 }
 
-#toolbar{
-    width:100%;
+#toolbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 100px;
-    background-color:var(--medium);
-  }
-  
+    background-color: var(--medium);
+}
+
+#board-title{
+    margin: auto 30px;
+}
